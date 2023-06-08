@@ -13,7 +13,7 @@ const Banner = () => {
                     <div className="hero-overlay bg-opacity-60"></div>
                     <div className="hero-content text-center text-neutral-content">
                         <div className="max-w-md bg-yellow-100 bg-opacity-20 rounded">
-                            <h1 className="mb-5 text-5xl font-bold italic text-amber-500">Welcome To Our Music Instrument Learning Club <br /> <small className="text-yellow-100 font-medium text-2xl not-italic uppercase">In summer vacation</small> </h1>
+                            <h1 className="mb-5 md:text-5xl md:font-bold italic text-amber-500">Welcome To Our Music Instrument Learning Club <br /> <small className="text-yellow-100 font-medium text-2xl not-italic uppercase">In summer vacation</small> </h1>
                             <p className="mb-5 font-bold">A musical instrument is a device created or adapted to make musical sounds.</p>
                         </div>
                     </div>

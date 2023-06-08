@@ -3,13 +3,14 @@ import img from "../../assets/icon.png"
 import { AuthContext } from "../../providers/AuthProvider";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 
 
 const Login = () => {
 
     const {signIn} = useContext(AuthContext);
 
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit } = useForm();
 
     const onSubmit = data => {
         console.log(data);
@@ -17,6 +18,15 @@ const Login = () => {
         .then(result => {
             const user = result.user;
             console.log(user);
+            Swal.fire({
+                title: 'User Log in successfully',
+                showClass: {
+                  popup: 'animate__animated animate__fadeInDown'
+                },
+                hideClass: {
+                  popup: 'animate__animated animate__fadeOutUp'
+                }
+              })
         })
     };
 

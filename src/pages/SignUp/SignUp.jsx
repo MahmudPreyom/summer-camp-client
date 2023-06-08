@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import img from "../../assets/icon.png"
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
@@ -7,6 +7,8 @@ import { AuthContext } from "../../providers/AuthProvider";
 const SignUp = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
+    // const password = useRef({});
+    // password.current = watch("password", "")
     const {createUser} = useContext(AuthContext);
 
     const onSubmit = data => {
@@ -63,13 +65,23 @@ const SignUp = () => {
                             {errors.password?.type === 'minLength' && <span className="text-red-600">Password is must be 6 Characters</span>}
                             {errors.password?.type === 'pattern' && <p className="text-red-600">Password must have one uppercase, one lower case, one special character</p>}
                         </div>
-                        {/* <div className="form-control">
-                            <label className="label">
+                            {/* main */}
+                        <div className="form-control">
+                            {/* <label className="label">
                                 <span className="label-text">Confirm Password</span>
                             </label>
-                            <input type="password" {...register("confirm",{ required: true })} name="confirm" placeholder="confirm password" className="input input-bordered" />
-                            {errors.confirm?.type === "password" && <span className="text-red-600">Confirm Password is required</span>}
-                        </div> */}
+                            <input type="password" ref={...register("confirm",{ required: true })} name="confirm" placeholder="confirm password" className="input input-bordered" />
+                            {errors.confirm?.type === "password" && <span className="text-red-600">Confirm Password is required</span>} */}
+
+
+                            {/* trial todo */}
+
+                            {/* <input type="password" ref={...register({
+                                validate: value => value === password.current || "The Password do not match"
+                            })} name="confirm" placeholder="confirm password" className="input input-bordered" />
+                            {errors.confirm  && <span className="text-red-600">{errors.confirm.message}</span>} */}
+                            
+                        </div>
                         <div className="form-control mt-6">
                             <input className="btn btn-primary" type="submit" value="Sign Up" />
                         </div>
