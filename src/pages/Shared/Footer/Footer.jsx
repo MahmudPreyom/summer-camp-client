@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../../../assets/logo.png"
 import { Link } from "react-router-dom"
-import { FaFacebookSquare,FaFacebookMessenger,FaInstagramSquare,FaYoutube,FaSchool } from 'react-icons/fa'
+import { FaFacebookSquare, FaFacebookMessenger, FaInstagramSquare, FaYoutube, FaSchool } from 'react-icons/fa'
 import { FiPhoneCall } from 'react-icons/fi'
 import { MdLocationOn } from 'react-icons/md'
 
@@ -25,10 +25,10 @@ const Footer = () => {
                 <div className="mt-4">
                     <span className="footer-title">Social</span>
                     <div className="grid grid-flow-col gap-4">
-                        <Link to="https://www.facebook.com/mahmud.preyom"><FaFacebookSquare style={{fontSize: '1.5rem'}}></FaFacebookSquare></Link>
-                        <Link to="https://www.facebook.com/mahmud.preyom"><FaFacebookMessenger style={{fontSize: '1.5rem'}}></FaFacebookMessenger></Link>
-                        <Link to="https://www.instagram.com/mahmud_preyom/"><FaInstagramSquare style={{fontSize: '1.5rem'}}></FaInstagramSquare></Link>
-                        <Link to="https://www.youtube.com/channel/UCjMxx9QlxCZWbHELuvZxU5A"><FaYoutube style={{fontSize: '1.5rem'}}></FaYoutube></Link>
+                        <Link to="https://www.facebook.com/mahmud.preyom"><FaFacebookSquare style={{ fontSize: '1.5rem' }}></FaFacebookSquare></Link>
+                        <Link to="https://www.facebook.com/mahmud.preyom"><FaFacebookMessenger style={{ fontSize: '1.5rem' }}></FaFacebookMessenger></Link>
+                        <Link to="https://www.instagram.com/mahmud_preyom/"><FaInstagramSquare style={{ fontSize: '1.5rem' }}></FaInstagramSquare></Link>
+                        <Link to="https://www.youtube.com/channel/UCjMxx9QlxCZWbHELuvZxU5A"><FaYoutube style={{ fontSize: '1.5rem' }}></FaYoutube></Link>
                     </div>
                 </div>
             </footer>
