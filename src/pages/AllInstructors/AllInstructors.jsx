@@ -19,7 +19,7 @@ const AllInstructors = () => {
             {
                 allSir.map((item, index) =>
                     
-                        <div className="card lg:card-side bg-slate-300 shadow-xl mb-8 md:w-3/4 md:mx-auto" key={index}>
+                        <div className="card lg:card-side bg-slate-300 shadow-xl mb-8 md:w-3/4 w-full md:mx-auto" key={index}>
                             <figure><img className="h-[350px] w-[400px]" src={item.instructor_pic} alt="Album" /></figure>
                             <div className="card-body mt-16 md:items-center">
                                 <h2 className="card-title">Name: <span className="md:text-xl md:font-bold">{item.instructor_name}</span></h2>
