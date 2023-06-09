@@ -3,6 +3,8 @@ import {
   } from "react-router-dom";
 import Dashboard from "../Layout/Dashboard";
 import Main from "../Layout/Main";
+import AllClasses from "../pages/AllClasses/AllClasses";
+import AllInstructors from "../pages/AllInstructors/AllInstructors";
 import Home from "../pages/Home/Home/Home";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
@@ -15,6 +17,14 @@ import SignUp from "../pages/SignUp/SignUp";
         {
             path: '/',
             element: <Home></Home>
+        },
+        {
+            path: 'allinstructors',
+            element: <AllInstructors></AllInstructors>
+        },
+        {
+            path: 'allclasses',
+            element: <AllClasses></AllClasses>
         },
         {
             path: 'login',

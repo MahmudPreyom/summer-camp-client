@@ -35,7 +35,7 @@
       "_id": "3",
       "instructor_name": "Michael Johnson",
       "instructor_pic": "https://i.ibb.co/xf9Tdd5/jan-thumb-no-badge.jpg",
-      "instructor_email": "michaeljohnson@example.com",
+      "instructor_email": "michjohnson@example.com",
       "instructor_demand": "Popular",
       "instructor_details": "you get to express yourself through sound, make music with friends, and maybe even perform at local coffee shops or bars.",
       "class_name": "Drum Class",
@@ -51,7 +51,7 @@
       "_id": "4",
       "instructor_name": "Michael Doe",
       "instructor_pic": "https://i.ibb.co/LZKqYJh/p.jpg",
-      "instructor_email": "michael678@example.com",
+      "instructor_email": "michdoe@example.com",
       "instructor_demand": "Popular",
       "instructor_details": "you get to express yourself through sound, make music with friends, and maybe even perform at local coffee shops or bars.",
       "class_name": "Electric Piano Class",
@@ -67,7 +67,7 @@
       "_id": "5",
       "instructor_name": "Michael Johny",
       "instructor_pic": "https://i.ibb.co/G0dH6sb/images-1.jpg",
-      "instructor_email": "michael234@example.com",
+      "instructor_email": "michjhony@example.com",
       "instructor_demand": "Popular",
       "instructor_details": "you get to express yourself through sound, make music with friends, and maybe even perform at local coffee shops or bars.",
       "class_name": "Electric Drum Class",
@@ -83,13 +83,157 @@
       "_id": "6",
       "instructor_name": "Michael Jacks",
       "instructor_pic": "https://i.ibb.co/prLb0bx/DSC03215.jpg",
-      "instructor_email": "michael122@example.com",
+      "instructor_email": "michjacks@example.com",
       "instructor_demand": "Popular",
       "instructor_details": "you get to express yourself through sound, make music with friends, and maybe even perform at local coffee shops or bars.",
       "class_name": "Electric Guitar Class",
       "class_details":"Learning an instrument also offers benefits for your mind, health, and overall well-being.",
       "class_pic": "https://i.ibb.co/stgDZ2q/Best-Guitar-Lessons-in-Vancouver.jpg",
       "class_category": "popular",
+      "price": 700,
+      "available_seats": 5,
+      "total_students": 45,
+      "students":40
+    },
+    {
+      "_id": "7",
+      "instructor_name": "John Karli",
+      "instructor_pic": "https://i.ibb.co/9TTF66F/mr-toh-meng-wan-violin-teacher-profile.jpg",
+      "instructor_email": "johnkarli@example.com",
+      
+      "instructor_details": "you get to express yourself through sound, make music with friends, and maybe even perform at local coffee shops or bars.",
+      "class_name": "Violin Class",
+      "class_details":"Learning an instrument also offers benefits for your mind, health, and overall well-being.",
+      "class_pic": "https://i.ibb.co/nCxz4Kp/MV5-BNzcz-MTZj-Mm-Et-MTAz-ZC00-NDI0-LWFi-N2-Ut-Yz-Fi-ZTdl-MGIx-YTRk-Xk-Ey-Xk-Fqc-Gde-QXVy-MTE3-MDAw.jpg",
+      
+      "price": 500,
+      "available_seats": 10,
+      "total_students": 30,
+      "students":20
+    },
+    {
+      "_id": "8",
+      "instructor_name": "Jane pal",
+      "instructor_pic": "https://i.ibb.co/LtHyWn3/Harmonium.jpg",
+      "instructor_email": "janepal@example.com",
+      
+      "instructor_details": "you get to express yourself through sound, make music with friends, and maybe even perform at local coffee shops or bars.",
+      "class_name": "Harmoniam Class",
+      "class_details":"Learning an instrument also offers benefits for your mind, health, and overall well-being.",
+      "class_pic": "https://i.ibb.co/FBsp0H8/images-3.jpg",
+      
+      "price": 400,
+      "available_seats": 8,
+      "total_students": 35,
+      "students":27
+    },
+    {
+      "_id": "9",
+      "instructor_name": "Michael Karli",
+      "instructor_pic": "https://i.ibb.co/KsBxgqb/DSC03664.webp",
+      "instructor_email": "michkarli@example.com",
+      
+      "instructor_details": "you get to express yourself through sound, make music with friends, and maybe even perform at local coffee shops or bars.",
+      "class_name": "Flute Class",
+      "class_details":"Learning an instrument also offers benefits for your mind, health, and overall well-being.",
+      "class_pic": "https://i.ibb.co/N2XK1x9/gettyimages-153337712-612x612.jpg",
+      
+      "price": 450,
+      "available_seats": 5,
+      "total_students": 40,
+      "students":35
+    },
+    {
+      "_id": "10",
+      "instructor_name": "Michael Pal",
+      "instructor_pic": "https://i.ibb.co/km2tsJD/Otto-Gumaelius-African-Marimba-Music.jpg",
+      "instructor_email": "michapal@example.com",
+      
+      "instructor_details": "you get to express yourself through sound, make music with friends, and maybe even perform at local coffee shops or bars.",
+      "class_name": "Marimba Class",
+      "class_details":"Learning an instrument also offers benefits for your mind, health, and overall well-being.",
+      "class_pic": "https://i.ibb.co/GHHJKN1/download.jpg",
+      
+      "price": 480,
+      "available_seats": 6,
+      "total_students": 30,
+      "students":24
+    },
+    {
+      "_id": "11",
+      "instructor_name": "Michael Dorli",
+      "instructor_pic": "https://i.ibb.co/Fhtb3xR/ttds.jpg",
+      "instructor_email": "michdorli@example.com",
+      
+      "instructor_details": "you get to express yourself through sound, make music with friends, and maybe even perform at local coffee shops or bars.",
+      "class_name": "Harmonica Class",
+      "class_details":"Learning an instrument also offers benefits for your mind, health, and overall well-being.",
+      "class_pic": "https://i.ibb.co/tqb7QQ7/SYF-Rehearsals.jpg",
+      
+      "price": 770,
+      "available_seats": 5,
+      "total_students": 40,
+      "students":35
+    },
+    {
+      "_id": "12",
+      "instructor_name": "Michael Jackson",
+      "instructor_pic": "https://i.ibb.co/3M7V0bD/13853630.jpg",
+      "instructor_email": "jackson@example.com",
+      
+      "instructor_details": "you get to express yourself through sound, make music with friends, and maybe even perform at local coffee shops or bars.",
+      "class_name": "Ukulele Class",
+      "class_details":"Learning an instrument also offers benefits for your mind, health, and overall well-being.",
+      "class_pic": "https://i.ibb.co/qntmWTb/images-4.jpg",
+      
+      "price": 700,
+      "available_seats": 5,
+      "total_students": 45,
+      "students":40
+    },
+    {
+      "_id": "13",
+      "instructor_name": "Michael Halk",
+      "instructor_pic": "https://i.ibb.co/C5k3K0m/ufgytfg.jpg",
+      "instructor_email": "michhalk@example.com",
+      
+      "instructor_details": "you get to express yourself through sound, make music with friends, and maybe even perform at local coffee shops or bars.",
+      "class_name": "Trumpet Class",
+      "class_details":"Learning an instrument also offers benefits for your mind, health, and overall well-being.",
+      "class_pic": "https://i.ibb.co/LPzLgyr/images-5.jpg",
+      
+      "price": 480,
+      "available_seats": 6,
+      "total_students": 30,
+      "students":24
+    },
+    {
+      "_id": "14",
+      "instructor_name": "Johny Jackson",
+      "instructor_pic": "https://i.ibb.co/xgYsbmc/1281561-68438.jpg",
+      "instructor_email": "jackson12@example.com",
+      
+      "instructor_details": "you get to express yourself through sound, make music with friends, and maybe even perform at local coffee shops or bars.",
+      "class_name": "Tabla Class",
+      "class_details":"Learning an instrument also offers benefits for your mind, health, and overall well-being.",
+      "class_pic": "https://i.ibb.co/LPdDTLR/images-6.jpg",
+      
+      "price": 770,
+      "available_seats": 5,
+      "total_students": 40,
+      "students":35
+    },
+    {
+      "_id": "15",
+      "instructor_name": "Doe Jacks",
+      "instructor_pic": "https://i.ibb.co/RY33TKs/istockphoto-1143696552-612x612.jpg",
+      "instructor_email": "doejacks@example.com",
+      
+      "instructor_details": "you get to express yourself through sound, make music with friends, and maybe even perform at local coffee shops or bars.",
+      "class_name": "Sitar Class",
+      "class_details":"Learning an instrument also offers benefits for your mind, health, and overall well-being.",
+      "class_pic": "https://i.ibb.co/kSB0Zkz/2020-10-17.jpg",
+      
       "price": 700,
       "available_seats": 5,
       "total_students": 45,

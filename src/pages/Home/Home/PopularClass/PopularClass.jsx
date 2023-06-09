@@ -26,9 +26,6 @@ const PopularClass = () => {
                                 <p>Price: $ {item.price}</p>
                                 <p>Total Students: {item.total_students}</p>
                                 <p>Available Seats: {item.available_seats}</p>
-                                <div className="card-actions justify-end">
-
-                                </div>
                             </div>
                         </div>
                     )

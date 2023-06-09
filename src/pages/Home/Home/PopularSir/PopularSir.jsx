@@ -17,17 +17,15 @@ const PopularClass = () => {
                 {
                     poplarSir.map((item, index) => 
                         <div className="card md:w-72 w-full bg-base-100 shadow-xl" key={index}>
-                            <figure><img className="h-[300px] w-full" src={item.instructor_pic} alt="Shoes" /></figure>
+                            <figure><img className="h-[300px] md:w-full" src={item.instructor_pic} alt="Shoes" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title">
                                     {item.instructor_name}
                                     <div className="badge badge-secondary">{item.instructor_demand}</div>
                                 </h2>
-                                <p className="text-xl font-bold" >{item.class_name}</p>
+                                <p className="text-xl font-bold">Popular For: {item.class_name}</p>
                                 <p>Students: {item.students}</p>
-                                <div className="card-actions justify-end">
-
-                                </div>
+                                
                             </div>
                         </div>
                     )
