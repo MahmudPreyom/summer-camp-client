@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import img from "../../assets/instructor/img.png"
+import { Helmet } from "react-helmet-async"
 
 const AllInstructors = () => {
     const [allSir, setAllSir] = useState([]);
@@ -14,6 +15,9 @@ const AllInstructors = () => {
     }, [])
     return (
         <div>
+            <Helmet>
+                <title>MI Learning | Instructors</title>
+            </Helmet>
             <img className="w-full h-[500px]" src={img} alt="" />
             <h3 className="text-center font-bold text-4xl mt-24 text-yellow-800 mb-10">All Instructors</h3>
             {

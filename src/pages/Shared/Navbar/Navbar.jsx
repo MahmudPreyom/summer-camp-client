@@ -21,9 +21,9 @@ const Navbar = () => {
                     </label>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li className="text-black"><Link to="/">Home</Link></li>
-                        <li className="text-black"><Link to="/allinstructors">Instructors</Link> </li>
+                        <li className="text-black"><Link to="/allinstructors">Instructors</Link></li>
                         <li className="text-black"><Link to="/allclasses">Classes</Link></li>
-                        <li className="text-black"><Link>Dashboard</Link></li>
+                        {user && <li className="text-black"><Link>Dashboard</Link></li>}
                     </ul>
                 </div>
                 <img src={logo} alt="" />
@@ -33,10 +33,11 @@ const Navbar = () => {
                     <li className="text-xl font-semibold"><Link to="/">Home</Link></li>
                     <li className="text-xl font-semibold"><Link to="/allinstructors">Instructors</Link></li>
                     <li className="text-xl font-semibold"><Link to="/allclasses">Classes</Link></li>
-                    <li className="text-xl font-semibold"><Link>Dashboard</Link></li>
+                    {user && <li className="text-xl font-semibold"><Link>Dashboard</Link></li>}
                 </ul>
             </div>
             <div className="navbar-end">
+                {user && <div><img className="w-8 mr-2 rounded-full" src={user.photoURL} alt="" /></div> }
                 {
                     user ?
                         <><button onClick={handleLogOut} className="btn btn-sm">Log Out</button></> :
