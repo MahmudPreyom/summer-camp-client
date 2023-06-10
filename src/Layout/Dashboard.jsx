@@ -4,6 +4,7 @@ import { FaHome, FaUsers, FaWallet } from 'react-icons/fa';
 import { ImBooks } from 'react-icons/im';
 import useAdmin from '../hooks/useAdmin';
 import useInstructor from '../hooks/useInstructor';
+import img from "../assets/icon.png"
 
 
 const Dashboard = () => {
@@ -21,16 +22,18 @@ const Dashboard = () => {
                 {/* Page content here */}
                 <label htmlFor="my-drawer-2" className="btn drawer-button lg:hidden">Open drawer</label>
                 <Outlet></Outlet>
-
             </div>
             <div className="drawer-side">
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-                <ul className="menu p-4 w-80 h-full bg-[#cdc2ae] text-white text-xl font-semibold">
+                <ul className="menu p-4 w-80 h-full bg-[#cdc2ae] text-white text-xl font-semibold mb-3">
+                    <div>
+                        <h1 className="text-3xl font-bold text-red-900 mb-5 text-center">Music Instruments Learning in <br /> <span className='text-xl uppercase text-orange-700'>Summer Vacation Camp</span></h1>
+                    </div>
                     {/* Sidebar content here */}
                     {isAdmin ? <>
                         <li><NavLink><FaHome></FaHome> Admin Home</NavLink></li>
                         <li><NavLink to="/dashboard/allusers"><FaUsers></FaUsers>Operate Users</NavLink></li>
-                        <li><NavLink><ImBooks></ImBooks>Update Classes</NavLink></li>
+                        <li><NavLink to="/dashboard/manageclass"><ImBooks></ImBooks>Manage Class</NavLink></li>
 
                     </> :
                         isInstructor ? <>

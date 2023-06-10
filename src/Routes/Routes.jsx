@@ -1,8 +1,7 @@
-import {
-    createBrowserRouter
-  } from "react-router-dom";
+import {createBrowserRouter} from "react-router-dom";
 import AllUsers from "../components/AllUsers/AllUsers";
-import OparateClasses from "../components/OparateClass/OparateClasses";
+import ManageClasses from "../components/ManageClasses/ManageClasses";
+import UpdateClasses from "../components/UpdateClass/UpdateClasses";
 import Dashboard from "../Layout/Dashboard";
 import Main from "../Layout/Main";
 import AllClasses from "../pages/AllClasses/AllClasses";
@@ -49,7 +48,11 @@ import PrivateRoute from "./PrivateRoute";
             },
             {
                 path: "operateclass",
-                element: <OparateClasses></OparateClasses>
+                element: <UpdateClasses></UpdateClasses>
+            },
+            {
+                path: "manageclass",
+                element: <ManageClasses></ManageClasses>
             }
         ]
     }
