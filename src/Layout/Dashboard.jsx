@@ -29,8 +29,8 @@ const Dashboard = () => {
                     {/* Sidebar content here */}
                     {isAdmin ? <>
                         <li><NavLink><FaHome></FaHome> Admin Home</NavLink></li>
-                        <li><NavLink to="/dashboard/allusers"><FaUsers></FaUsers>Manage Users</NavLink></li>
-                        <li><NavLink><ImBooks></ImBooks>Manage Classes</NavLink></li>
+                        <li><NavLink to="/dashboard/allusers"><FaUsers></FaUsers>Operate Users</NavLink></li>
+                        <li><NavLink to="/dashboard/operateclass"><ImBooks></ImBooks>Update Classes</NavLink></li>
 
                     </> :
                         isInstructor ? <>

@@ -2,6 +2,7 @@ import {
     createBrowserRouter
   } from "react-router-dom";
 import AllUsers from "../components/AllUsers/AllUsers";
+import OparateClasses from "../components/OparateClass/OparateClasses";
 import Dashboard from "../Layout/Dashboard";
 import Main from "../Layout/Main";
 import AllClasses from "../pages/AllClasses/AllClasses";
@@ -45,6 +46,10 @@ import PrivateRoute from "./PrivateRoute";
             {
                 path: "allusers",
                 element: <AllUsers></AllUsers>
+            },
+            {
+                path: "operateclass",
+                element: <OparateClasses></OparateClasses>
             }
         ]
     }
