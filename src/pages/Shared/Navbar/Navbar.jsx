@@ -37,7 +37,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                {user && <div><img className="w-8 mr-2 rounded-full" src={user.photoURL} alt="" /></div> }
+                {user && <img className="w-8 mr-2 rounded-full" src={user.photoURL} alt="" /> }
                 {
                     user ?
                         <><button onClick={handleLogOut} className="btn btn-sm">Log Out</button></> :

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import img from "../../assets/icon.png"
 import { AuthContext } from "../../providers/AuthProvider";
-import { Link } from "react-router-dom";
+import { Link,useNavigate, useLocation } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import SocialLogin from "../Shared/SocialLogin/SocialLogin";
@@ -11,8 +11,10 @@ import { Helmet } from "react-helmet-async"
 const Login = () => {
 
     const { signIn } = useContext(AuthContext);
-
     const { register, handleSubmit } = useForm();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
 
     const onSubmit = data => {
         console.log(data);
@@ -29,6 +31,7 @@ const Login = () => {
                         popup: 'animate__animated animate__fadeOutUp'
                     }
                 })
+                navigate(from, { replace: true });
             })
     };
 
