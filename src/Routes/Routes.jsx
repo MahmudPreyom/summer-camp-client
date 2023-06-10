@@ -1,6 +1,7 @@
 import {
     createBrowserRouter
   } from "react-router-dom";
+import AllUsers from "../components/AllUsers/AllUsers";
 import Dashboard from "../Layout/Dashboard";
 import Main from "../Layout/Main";
 import AllClasses from "../pages/AllClasses/AllClasses";
@@ -42,7 +43,8 @@ import PrivateRoute from "./PrivateRoute";
         element: <Dashboard></Dashboard>,
         children: [
             {
-                path: ""
+                path: "allusers",
+                element: <AllUsers></AllUsers>
             }
         ]
     }
