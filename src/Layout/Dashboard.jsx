@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
-import { FaHome, FaUsers, FaWallet } from 'react-icons/fa';
+import { FaHome, FaUsers, FaWallet,FaChalkboardTeacher,FaUserTie } from 'react-icons/fa';
 import { ImBooks } from 'react-icons/im';
 import useAdmin from '../hooks/useAdmin';
 import useInstructor from '../hooks/useInstructor';
@@ -54,8 +54,8 @@ const Dashboard = () => {
 
                     <div className="divider"></div>
                     <li><NavLink to="/"><FaHome></FaHome> Home</NavLink> </li>
-                    <li><NavLink to="/instructors">Instructors</NavLink></li>
-                    <li><NavLink to="/classe">Classes</NavLink></li>
+                    <li><NavLink to="/allinstructors"><FaUserTie></FaUserTie>Instructors</NavLink></li>
+                    <li><NavLink to="/allclasses"><FaChalkboardTeacher></FaChalkboardTeacher>Classes</NavLink></li>
                 </ul>
 
             </div>
