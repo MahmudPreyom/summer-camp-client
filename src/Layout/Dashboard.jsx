@@ -2,6 +2,8 @@ import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import { FaHome, FaUsers, FaWallet,FaChalkboardTeacher,FaUserTie } from 'react-icons/fa';
 import { ImBooks } from 'react-icons/im';
+import { BiSelectMultiple } from 'react-icons/bi';
+import { GrRadialSelected } from 'react-icons/gr';
 import useAdmin from '../hooks/useAdmin';
 import useInstructor from '../hooks/useInstructor';
 import img from "../assets/icon.png"
@@ -41,7 +43,8 @@ const Dashboard = () => {
                             <li><NavLink to="/dashboard/operateclass"><FaUsers></FaUsers> Add a class</NavLink></li>
                         </> :
                             <>
-                                <li><NavLink><FaHome></FaHome>Students Home</NavLink></li>
+                                <li><NavLink><BiSelectMultiple></BiSelectMultiple>Selected Class</NavLink></li>
+                                <li><NavLink><GrRadialSelected></GrRadialSelected>Enrolled Class</NavLink></li>
                                 <li><NavLink><FaWallet></FaWallet> Payment History</NavLink></li>
                                 {/* <li>
                             <NavLink to="/dashboard/mycart"><FaShoppingCart></FaShoppingCart> My Cart
