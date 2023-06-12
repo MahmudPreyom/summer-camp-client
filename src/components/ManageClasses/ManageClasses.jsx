@@ -23,7 +23,7 @@ const ManageClasses = () => {
                 status: 'denied'
             }
         }
-        fetch(`http://localhost:5000/classes/${classe._id}`, {
+        fetch(`https://summer-vacation-server-mahmudpreyom.vercel.app/classes/${classe._id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

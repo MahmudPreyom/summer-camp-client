@@ -22,7 +22,7 @@ const SignUp = () => {
           .then(() => {
             const saveUser = { name: data.name, email: data.email };
             console.log(saveUser);
-            fetch('http://localhost:5000/users', {
+            fetch('https://summer-vacation-server-mahmudpreyom.vercel.app/users', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json'

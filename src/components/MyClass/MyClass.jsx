@@ -18,8 +18,8 @@ const MyClass = () => {
 
     return (
         <div>
-            {
-                classesStatus.map((item,index) =><div className="overflow-x-auto">
+                
+                <div className="overflow-x-auto">
                 <table className="table rounded">
                   {/* head */}
                   <thead className='bg-[#cdc2ae] text-black'>
@@ -33,7 +33,8 @@ const MyClass = () => {
                   </thead>
                   <tbody>
                     {/* row 1 */}
-                    <tr>
+                    {classesStatus.map((item,index) =>
+                    <tr key={index}>
                       <th>
                         <img className="w-[50px] h-[50px] rounded" src={item.classImage} alt="" />
                       </th>
@@ -47,15 +48,12 @@ const MyClass = () => {
                       <th>
                       <Link className="btn btn-ghost btn-sm bg-[#cbb279] rounded-full  text-white"><GrDocumentUpdate></GrDocumentUpdate>Update</Link>
                       </th>
-                    </tr>
+                    </tr>)}
+
                   </tbody>
                   
                 </table>
               </div>
-                
-                )
-                
-            }
         </div>
     );
 };

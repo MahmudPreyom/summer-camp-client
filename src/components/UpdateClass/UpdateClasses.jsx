@@ -9,7 +9,7 @@ const UpdateClasses = () => {
     const onSubmit = (data) => {
       const classData = { ...data, status: "pending" };
       console.log(classData)
-      fetch("http://localhost:5000/classes", {
+      fetch("https://summer-vacation-server-mahmudpreyom.vercel.app/classes", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

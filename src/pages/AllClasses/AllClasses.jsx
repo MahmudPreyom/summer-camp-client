@@ -22,7 +22,7 @@ const AllClasses = () => {
     const addMyClasses = (item) => {
         console.log(item);
         const addItem = { itemId: item._id, className: item.className, price: item.price, email:user.email, instructorName:item.instructorName, instructorEmail: item.instructorEmail, availableSeats: item.availableSeats, price: item.price, classImage: item.classImage }
-        fetch(`http://localhost:5000/myclasscart`, {
+        fetch(`https://summer-vacation-server-mahmudpreyom.vercel.app/myclasscart`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -39,7 +39,7 @@ const AllClasses = () => {
         const updateData = {
             availableSeats: parseInt(item.availableSeats) - 1
         }
-        fetch(`http://localhost:5000/myclasscart/${item._id}`, {
+        fetch(`https://summer-vacation-server-mahmudpreyom.vercel.app/myclasscart/${item._id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
