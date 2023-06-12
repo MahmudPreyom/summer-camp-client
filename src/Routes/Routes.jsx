@@ -1,6 +1,8 @@
 import {createBrowserRouter} from "react-router-dom";
 import AllUsers from "../components/AllUsers/AllUsers";
 import ManageClasses from "../components/ManageClasses/ManageClasses";
+import MyClass from "../components/MyClass/MyClass";
+import SelectedClass from "../components/SelectedClass/SelectedClass";
 import UpdateClasses from "../components/UpdateClass/UpdateClasses";
 import Dashboard from "../Layout/Dashboard";
 import Main from "../Layout/Main";
@@ -9,6 +11,7 @@ import AllInstructors from "../pages/AllInstructors/AllInstructors";
 import Home from "../pages/Home/Home/Home";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
+import AdminRoute from "./AdminRoute";
 import PrivateRoute from "./PrivateRoute";
 
  export const router = createBrowserRouter([
@@ -44,15 +47,23 @@ import PrivateRoute from "./PrivateRoute";
         children: [
             {
                 path: "allusers",
-                element: <AllUsers></AllUsers>
+                element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
             },
             {
-                path: "operateclass",
+                path: "addclass",
                 element: <UpdateClasses></UpdateClasses>
             },
             {
                 path: "manageclass",
-                element: <ManageClasses></ManageClasses>
+                element: <AdminRoute><ManageClasses></ManageClasses></AdminRoute>
+            },
+            {
+                path: "myclass",
+                element: <MyClass></MyClass>
+            },
+            {
+                path: "selectedclass",
+                element: <SelectedClass></SelectedClass>
             }
         ]
     }

@@ -1,16 +1,18 @@
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
-import { FaHome, FaUsers, FaWallet,FaChalkboardTeacher,FaUserTie } from 'react-icons/fa';
+import { FaHome, FaUsers, FaWallet, FaChalkboardTeacher, FaUserTie,FaShoppingCart } from 'react-icons/fa';
 import { ImBooks } from 'react-icons/im';
 import { BiSelectMultiple } from 'react-icons/bi';
 import { GrRadialSelected } from 'react-icons/gr';
+import { SiGoogleclassroom } from 'react-icons/si';
 import useAdmin from '../hooks/useAdmin';
 import useInstructor from '../hooks/useInstructor';
 import img from "../assets/icon.png"
+import useCart from '../hooks/useCart';
 
 
 const Dashboard = () => {
-
+    const {cart} = useCart()
     // const isAdmin = true;
     // const isInstructor = true;
     const [isAdmin] = useAdmin();
@@ -39,19 +41,13 @@ const Dashboard = () => {
 
                     </> :
                         isInstructor ? <>
-                            <li><NavLink><FaHome></FaHome>Instructor Home</NavLink></li>
-                            <li><NavLink to="/dashboard/operateclass"><FaUsers></FaUsers> Add a class</NavLink></li>
+                            <li><NavLink to="/dashboard/myclass"><SiGoogleclassroom></SiGoogleclassroom>My Class</NavLink></li>
+                            <li><NavLink to="/dashboard/addclass"><FaUsers></FaUsers> Add a class</NavLink></li>
                         </> :
                             <>
-                                <li><NavLink><BiSelectMultiple></BiSelectMultiple>Selected Class</NavLink></li>
+                                <li><NavLink to="/dashboard/selectedclass"><BiSelectMultiple></BiSelectMultiple>Selected Class</NavLink></li>
                                 <li><NavLink><GrRadialSelected></GrRadialSelected>Enrolled Class</NavLink></li>
                                 <li><NavLink><FaWallet></FaWallet> Payment History</NavLink></li>
-                                {/* <li>
-                            <NavLink to="/dashboard/mycart"><FaShoppingCart></FaShoppingCart> My Cart
-                                <span className="badge inl badge-secondary">+{cart?.length || 0}</span>
-                            </NavLink>
-
-                        </li> */}
                             </>
                     }
 

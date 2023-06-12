@@ -3,8 +3,10 @@ import img from "../../assets/class/col.jpg"
 import { Helmet } from "react-helmet-async"
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import { useQuery } from '@tanstack/react-query';
+import useAuth from "../../Hooks/useAuth";
 
 const AllClasses = () => {
+    const {user} = useAuth();
     const [axiosSecure] = useAxiosSecure();
     const { data: classes = [], refetch } = useQuery(['classes'], async () => {
         const res = await axiosSecure.get('/classes')
@@ -12,6 +14,52 @@ const AllClasses = () => {
     })
 
     const approvedClasses = classes.filter(classe => classe.status === 'approved');
+
+    const addMyClasses = (item) => {
+        console.log(item);
+        const addItem = { itemId: item._id, className: item.className, price: item.price, email:user.email }
+        fetch(`http://localhost:5000/myclasscart`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(addItem)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                // if(data.insertedId){
+                //   console.log(data);
+                // }
+            })
+        const updateData = {
+            availableSeats: parseInt(item.availableSeats) - 1
+        }
+        fetch(`http://localhost:5000/myclasscart/${item._id}`, {
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updateData)
+        })
+            .then(res => res.json())
+            .then(data => {
+                refetch()
+                console.log(data)
+                // if (data.modifiedCount) {
+                //   refetch();
+                //   Swal.fire({
+                //     position: 'top-end',
+                //     icon: 'success',
+                //     title: ${user.name} is an apr Now!,
+                //     showConfirmButton: false,
+                //     timer: 1500
+                //   })
+                // }
+            })
+
+    }
+
     return (
         <>
             <Helmet>
@@ -30,7 +78,10 @@ const AllClasses = () => {
                                 <p>Available Seats: {item.availableSeats}</p>
                                 <p className="font-bold text-orange-500">Price:$ {item.price}</p>
                                 <div className="card-actions justify-center">
-                                    <button className="btn btn-primary btn-sm">Add Cart</button>
+                                    {/* <button className="btn btn-primary btn-sm">Add Cart</button> */}
+                                    <button disabled={(parseInt(item.availableSeats) < 1) ? true : false} onClick={() => addMyClasses(item)} className="btn btn-primary btn-sm">
+                                        Add Classes
+                                    </button>
                                 </div>
                             </div>
                         </div>
