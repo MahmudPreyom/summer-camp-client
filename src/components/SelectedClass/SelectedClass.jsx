@@ -20,31 +20,33 @@ const SelectedClass = () => {
         },
     })
 
-    // const handleDelete = () => {
-    //     Swal.fire({
-    //       title: 'Are you sure?',
-    //       text: "You won't be able to revert this!",
-    //       icon: 'warning',
-    //       showCancelButton: true,
-    //       confirmButtonColor: '#3085d6',
-    //       cancelButtonColor: '#d33',
-    //       confirmButtonText: 'Yes, delete it!'
-    //     }).then((result) => {
-    //       if (result.isConfirmed) {
+    
 
-    //         axiosSecure.delete(`/myclasscart/${myclasscart._id}`)
-    //         .then(res => {
-    //           console.log("deleted res",res.data);
-    //           refetch();
-    //           Swal.fire(
-    //           'Deleted!',
-    //           'User has been deleted.',
-    //           'success'
-    //         )
-    //         })
-    //       }
-    //     })
-    //   }
+    const handleDelete = (item) => {
+        Swal.fire({
+          title: 'Are you sure?',
+          text: "You won't be able to revert this!",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+          if (result.isConfirmed) {
+
+            axiosSecure.delete(`/myclasscart/${item._id}`)
+            .then(res => {
+              console.log("deleted res",res.data);
+              refetch();
+              Swal.fire(
+              'Deleted!',
+              'Class has been deleted.',
+              'success'
+            )
+            })
+          }
+        })
+      }
 
 
 
@@ -79,7 +81,7 @@ const SelectedClass = () => {
                                 <td>{classe.availableSeats}</td>
                                 <td>${classe.price}</td>
                                 <td>
-                                    <button className="btn btn-ghost bg-[#cbb279] rounded-full text-red-600"><FaTrashAlt></FaTrashAlt></button>
+                                    <button onClick={() => handleDelete(classe)} className="btn btn-ghost bg-[#cbb279] rounded-full text-red-600"><FaTrashAlt></FaTrashAlt></button>
                                 </td>
                             </tr>)
                         }
