@@ -8,6 +8,7 @@ import Dashboard from "../Layout/Dashboard";
 import Main from "../Layout/Main";
 import AllClasses from "../pages/AllClasses/AllClasses";
 import AllInstructors from "../pages/AllInstructors/AllInstructors";
+import Error from "../pages/Error";
 import Home from "../pages/Home/Home/Home";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
@@ -66,5 +67,9 @@ import PrivateRoute from "./PrivateRoute";
                 element: <SelectedClass></SelectedClass>
             }
         ]
+    },
+    {
+        path: "*",
+        element: <Error></Error>
     }
   ]);

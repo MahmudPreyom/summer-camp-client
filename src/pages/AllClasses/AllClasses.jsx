@@ -3,9 +3,13 @@ import img from "../../assets/class/col.jpg"
 import { Helmet } from "react-helmet-async"
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import { useQuery } from '@tanstack/react-query';
-import useAuth from "../../Hooks/useAuth";
+import useAuth from "../../hooks/useAuth";
+import useAdmin from "../../hooks/useAdmin";
+import useInstructor from "../../hooks/useInstructor";
 
 const AllClasses = () => {
+    const [isAdmin] = useAdmin();
+    const [isInstructor] = useInstructor()
     const {user} = useAuth();
     const [axiosSecure] = useAxiosSecure();
     const { data: classes = [], refetch } = useQuery(['classes'], async () => {
@@ -17,7 +21,7 @@ const AllClasses = () => {
 
     const addMyClasses = (item) => {
         console.log(item);
-        const addItem = { itemId: item._id, className: item.className, price: item.price, email:user.email }
+        const addItem = { itemId: item._id, className: item.className, price: item.price, email:user.email, instructorName:item.instructorName, instructorEmail: item.instructorEmail, availableSeats: item.availableSeats, price: item.price, classImage: item.classImage }
         fetch(`http://localhost:5000/myclasscart`, {
             method: 'POST',
             headers: {
@@ -78,8 +82,7 @@ const AllClasses = () => {
                                 <p>Available Seats: {item.availableSeats}</p>
                                 <p className="font-bold text-orange-500">Price:$ {item.price}</p>
                                 <div className="card-actions justify-center">
-                                    {/* <button className="btn btn-primary btn-sm">Add Cart</button> */}
-                                    <button disabled={(parseInt(item.availableSeats) < 1) ? true : false} onClick={() => addMyClasses(item)} className="btn btn-primary btn-sm">
+                                    <button disabled={ isAdmin || isInstructor|| (parseInt(item.availableSeats) < 1) ? true : false} onClick={() => addMyClasses(item)} className="btn btn-primary btn-sm">
                                         Add Classes
                                     </button>
                                 </div>

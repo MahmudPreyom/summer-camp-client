@@ -8,11 +8,9 @@ import { SiGoogleclassroom } from 'react-icons/si';
 import useAdmin from '../hooks/useAdmin';
 import useInstructor from '../hooks/useInstructor';
 import img from "../assets/icon.png"
-import useCart from '../hooks/useCart';
 
 
 const Dashboard = () => {
-    const {cart} = useCart()
     // const isAdmin = true;
     // const isInstructor = true;
     const [isAdmin] = useAdmin();
@@ -35,7 +33,6 @@ const Dashboard = () => {
                     </div>
                     {/* Sidebar content here */}
                     {isAdmin ? <>
-                        <li><NavLink><FaHome></FaHome> Admin Home</NavLink></li>
                         <li><NavLink to="/dashboard/allusers"><FaUsers></FaUsers>Operate Users</NavLink></li>
                         <li><NavLink to="/dashboard/manageclass"><ImBooks></ImBooks>Manage Class</NavLink></li>
 
