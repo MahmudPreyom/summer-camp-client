@@ -1,8 +1,13 @@
 # b712-summer-camp-client-side-MahmudPreyom
-b712-summer-camp-client-side-MahmudPreyom created by GitHub Classroom
+# Summer Vacation Camp
+
+# website features
+User Registration and Authentication
+Search Functionality
+Responsive Design
+Social Media Integration
 
 # Technologies Used
-MusicLearn utilizes the following technologies and packages:
 
 Front-end: JavaScript
 Framework: React.js
@@ -12,4 +17,5 @@ Backend: Node.js
 Database: MongoDB
 Authentication: JSON Web Tokens (JWT)
 
-# live link: https://summer-camp-e2784.web.app/
+# live link:
+https://summer-camp-e2784.web.app/
