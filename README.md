@@ -2,9 +2,9 @@
 # Summer Vacation Camp
 
 # website features
-User Registration and Authentication
-Search Functionality
-Responsive Design
+User Registration and Authentication,
+Search Functionality,
+Responsive Design,
 Social Media Integration
 
 # Technologies Used
