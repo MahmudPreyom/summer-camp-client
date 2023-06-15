@@ -1,4 +1,3 @@
-# b712-summer-camp-client-side-MahmudPreyom
 # Summer Vacation Camp
 
 # website features
@@ -9,12 +8,12 @@ Social Media Integration
 
 # Technologies Used
 
-Front-end: JavaScript
-Framework: React.js
-UI Library: Tailwind, daisyui 
-Routing: React Router
-Backend: Node.js
-Database: MongoDB
+Front-end: JavaScript,
+Framework: React.js,
+UI Library: Tailwind, daisyui ,
+Routing: React Router,
+Backend: Node.js,
+Database: MongoDB,
 Authentication: JSON Web Tokens (JWT)
 
 # live link:
