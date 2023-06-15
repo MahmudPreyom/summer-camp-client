@@ -26,11 +26,11 @@ import PrivateRoute from "./PrivateRoute";
         },
         {
             path: 'allinstructors',
-            element: <PrivateRoute><AllInstructors></AllInstructors></PrivateRoute>
+            element: <AllInstructors></AllInstructors>
         },
         {
             path: 'allclasses',
-            element: <PrivateRoute><AllClasses></AllClasses></PrivateRoute>
+            element: <AllClasses></AllClasses>
         },
         {
             path: 'login',

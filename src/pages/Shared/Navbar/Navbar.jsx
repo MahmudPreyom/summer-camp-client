@@ -23,7 +23,7 @@ const Navbar = () => {
                         <li className="text-black"><Link to="/">Home</Link></li>
                         <li className="text-black"><Link to="/allinstructors">Instructors</Link></li>
                         <li className="text-black"><Link to="/allclasses">Classes</Link></li>
-                        {user && <li className="text-black"><Link>Dashboard</Link></li>}
+                        {user && <li className="text-black"><Link to="/dashboard">Dashboard</Link></li>}
                     </ul>
                 </div>
                 <img src={logo} alt="" />
