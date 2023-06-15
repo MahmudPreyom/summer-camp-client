@@ -12,4 +12,4 @@ Backend: Node.js
 Database: MongoDB
 Authentication: JSON Web Tokens (JWT)
 
-live link: https://summer-camp-e2784.web.app/
+# live link: https://summer-camp-e2784.web.app/
